@@ -43,6 +43,16 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/signUp" element={<SignUp />} />
+          <Route
+            path="/userLogin"
+            element={
+              <Login
+                setUser={setUser}
+                toggleAuthenticated={toggleAuthenticated}
+              />
+            }
+          />
         </Routes>
       </main>
     </div>
