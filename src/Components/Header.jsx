@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-const url = require('public/TakeoffLogo.png')
+const url = require('../Components/TakeoffLogo.png')
 const Header = ({ LogOut, user }) => {
   let userButtonOpt
   if (user) {

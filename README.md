@@ -8,7 +8,7 @@
 
 ---
 
-![Logo](public/TakeoffLogo.png)
+![Logo](../takeoff-app/src/Components/TakeoffLogo.png)
 
 ### **_Description_**
 
