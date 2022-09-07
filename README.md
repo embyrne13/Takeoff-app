@@ -8,7 +8,7 @@
 
 ---
 
-![Logo](Images/TakeoffLogo.png)
+![Logo](public/TakeoffLogo.png)
 
 ### **_Description_**
 
