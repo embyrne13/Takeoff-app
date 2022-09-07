@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import Home from './Pages/Home'
 import Header from './Components/Header'
 import { CheckLogin } from './services/Auth'
@@ -9,41 +10,40 @@ function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
   // Auth functions
-  const checkToken = async () => {
-    const user = await CheckLogin()
-    setUser(user)
-    toggleAuthenticated(true)
-  }
+  // const checkToken = async () => {
+  //   const user = await CheckLogin()
+  //   setUser(user)
+  //   toggleAuthenticated(true)
+  // }
 
-  useEffect(() => {
-    if (authenticated) {
-      handleUserPlaylists(user)
-    }
-  }, [user])
+  // useEffect(() => {
+  //   if (authenticated) {
+  //     user
+  //   }
+  // }, [user])
 
-  useEffect(() => {
-    const token = localStorage.getItem('token')
-    if (token && user) {
-      checkToken()
-    } else if (token && !user) {
-      localStorage.clear()
-    }
-  }, [])
-  const LogOut = () => {
-    setUser(null)
-    setUserPlaylists(null)
-    setSelectedSong(null)
-    setSelectedPlaylist(null)
-    toggleAuthenticated(false)
-    localStorage.clear()
-  }
+  // useEffect(() => {
+  //   const token = localStorage.getItem('token')
+  //   if (token && user) {
+  //     checkToken()
+  //   } else if (token && !user) {
+  //     localStorage.clear()
+  //   }
+  // }, [])
+  // const LogOut = () => {
+  //   setUser(null)
+  //   toggleAuthenticated(false)
+  //   localStorage.clear()
+  // }
   return (
     <div className="App">
-      <Header LogOut={LogOut} user={user} authenticated={authenticated} />
+      <Header
+      // LogOut={LogOut} user={user} authenticated={authenticated}
+      />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/signUp" element={<SignUp />} />
+          <Route path="/signUp" element={<Signup />} />
           <Route
             path="/userLogin"
             element={
