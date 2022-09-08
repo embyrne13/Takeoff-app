@@ -1,12 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap');
 .App {
   text-align: center;
-  font-family: 'Aboreto', cursive;
+  font-family: 'Alegreya Sans SC', sans-serif;
   font-weight: bold;
-}
-header {
-  background-color: green;
 }
 nav {
   display: flex;
@@ -19,15 +15,17 @@ nav {
 .navLinks:hover {
   text-decoration: none;
   color: white;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Alegreya Sans SC', sans-serif;
 }
 .navLinks {
   text-decoration: none;
   font-size: 23px;
   padding-left: 17px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Alegreya Sans SC', sans-serif;
   color: rgb(0, 194, 203);
   display: flex;
   justify-content: flex-end;
-  margin-right: 10px;
+}
+.nav {
+  margin-right: 20px;
 }

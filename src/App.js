@@ -6,6 +6,7 @@ import { CheckLogin } from './services/Auth'
 import Client, { BASE_URL } from './services/api'
 import Signup from './Pages/Signup'
 import Login from './Pages/Login'
+import './App.css'
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
