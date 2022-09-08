@@ -87,6 +87,9 @@ nav {
   font-size: 27px;
   color: rgb(56, 112, 194);
 }
+.loginHeader {
+  font-size: 33px;
+}
 .signUpPage {
   font-size: 27px;
   color: rgb(56, 112, 194);
@@ -98,4 +101,7 @@ nav {
 .signUpField {
   font-size: 22px;
   color: rgb(56, 112, 194);
+}
+.signUpHeader {
+  font-size: 33px;
 }
