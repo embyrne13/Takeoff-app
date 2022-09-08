@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-// import Home from './Pages/Home'
+import Home from './Pages/Home'
 import Header from './Components/Header'
 import { CheckLogin } from './services/Auth'
 import Client, { BASE_URL } from './services/api'
@@ -40,7 +40,7 @@ function App() {
       <Header LogOut={LogOut} user={user} authenticated={authenticated} />
       <main>
         <Routes>
-          {/* <Route path="/" element={<Home />} /> */}
+          <Route path="/" element={<Home />} />
           <Route path="/signUp" element={<Signup />} />
           <Route
             path="/userLogin"

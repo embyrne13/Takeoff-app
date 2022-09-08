@@ -8,9 +8,9 @@ const FlightDetails = ({
   handleGoToSearch,
   user,
   authenticated,
-  userFlights,
-  selectedFlight,
-  setSelectedFlight
+  userTickets,
+  selectedTicket,
+  setSelectedTicket
 }) => {
   const navigate = useNavigate()
 
@@ -110,7 +110,7 @@ const FlightDetails = ({
       <button className="buttonz" onClick={handleGoToSearch}>
         Back to Search
       </button>
-      {!selectedFlight ? selectOptions : null}
+      {!selectedTicket ? selectOptions : null}
     </div>
   )
 }
