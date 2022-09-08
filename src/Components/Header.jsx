@@ -25,7 +25,7 @@ const Header = ({ LogOut, user }) => {
         </div>
         <div className="nav">
           <Link className="navBarLinks" to="/tickets">
-            My Trips
+            Trips
           </Link>
           {userButtonOpt}
         </div>
