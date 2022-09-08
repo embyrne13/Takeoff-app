@@ -33,13 +33,13 @@ const SearchBar = ({ setSearch, setSearchFilters, handleSearchSubmit }) => {
             onChange={handleFormChange}
             placeholder="Departing"
           ></input>
-          <label htmlFor="search">Arriving </label>
+          <label htmlFor="search">Returning </label>
           <input
             type="date"
             className="searchField"
             id="search"
             onChange={handleFormChange}
-            placeholder="Arriving"
+            placeholder="Returning"
           ></input>
         </div>
         <button className="buttonz" type="submit">

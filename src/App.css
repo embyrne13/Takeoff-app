@@ -40,7 +40,7 @@ nav {
   margin-right: 100px;
   background-color: white;
   width: 27vw;
-  height: 58vh;
+  height: 60vh;
   border-radius: 10%;
 }
 .searchField {
@@ -58,5 +58,18 @@ nav {
   height: 90vh;
 }
 .logoH {
-  height: 11vh;
+  height: 13vh;
+}
+.buttonz:hover {
+  text-decoration: none;
+  background-color: rgb(56, 112, 194);
+  color: white;
+}
+
+.buttonz {
+  font-size: 21px;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgb(56, 112, 194);
+  font-family: 'Alegreya Sans SC', sans-serif;
 }
