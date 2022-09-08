@@ -50,24 +50,26 @@ const Home = ({
   // }, [])
 
   return (
-    <div id="flightSearch">
-      <div id="searchOptions">
-        <FlightSearch
-          search={search}
-          setSearch={setSearch}
-          flightSearchFilters={flightSearchFilters}
-          setFlightSearchFilters={setFlightSearchFilters}
-          handleSearchSubmit={handleSearchSubmit}
-        />
-      </div>
-      <div>
-        {searchResults?.map((flight, index) => (
-          <FlightDetails
-            key={flight.data.id}
-            flight={flight}
-            handleFlightSelect={() => handleFlightSelect(flight)}
+    <div className="home">
+      <div className="flightSearch">
+        <div id="searchOptions">
+          <FlightSearch
+            search={search}
+            setSearch={setSearch}
+            flightSearchFilters={flightSearchFilters}
+            setFlightSearchFilters={setFlightSearchFilters}
+            handleSearchSubmit={handleSearchSubmit}
           />
-        ))}
+        </div>
+        <div>
+          {searchResults?.map((flight, index) => (
+            <FlightDetails
+              key={flight.data.id}
+              flight={flight}
+              handleFlightSelect={() => handleFlightSelect(flight)}
+            />
+          ))}
+        </div>
       </div>
     </div>
   )

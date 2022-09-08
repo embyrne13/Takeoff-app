@@ -30,3 +30,33 @@ nav {
 .here {
   color: rgb(56, 112, 194);
 }
+.flightSearch {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.searchCard {
+  margin-top: 100px;
+  margin-right: 100px;
+  background-color: white;
+  width: 27vw;
+  height: 58vh;
+  border-radius: 10%;
+}
+.searchField {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 27px;
+  color: rgb(56, 112, 194);
+  padding: 5px;
+}
+.home {
+  background-image: url('https://p0.pikist.com/photos/450/710/airplane-view-mountains-above-landscape-top-flight-scenic-sky.jpg');
+  background-size: cover;
+  height: 90vh;
+}
+.logoH {
+  height: 11vh;
+}
