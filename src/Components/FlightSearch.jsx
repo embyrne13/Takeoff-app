@@ -16,25 +16,28 @@ const SearchBar = ({
     <div className="searchCard">
       <form onReset={handleFormReset} onSubmit={handleSearchSubmit}>
         <div className="searchField">
-          <label htmlFor="search">SEARCH: </label>
+          <label htmlFor="search">Leaving from </label>
           <input
             className="searchField"
             id="search"
             onChange={handleFormChange}
             placeholder="Leaving from"
           ></input>
+          <label htmlFor="search">Going to </label>
           <input
             className="searchField"
             id="search"
             onChange={handleFormChange}
             placeholder="Going to"
           ></input>
+          <label htmlFor="search">Departing </label>
           <input
             className="searchField"
             id="search"
             onChange={handleFormChange}
             placeholder="Departing"
           ></input>
+          <label htmlFor="search">Arriving </label>
           <input
             className="searchField"
             id="search"
