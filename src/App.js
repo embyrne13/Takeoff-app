@@ -1,7 +1,9 @@
 import { Route, Routes } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Home from './Pages/Home'
 import Header from './Components/Header'
+import Bookings from './Pages/Bookings'
 import { CheckLogin } from './services/Auth'
 import Client, { BASE_URL } from './services/api'
 import Signup from './Pages/Signup'
@@ -10,6 +12,10 @@ import './App.css'
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
+  const [selectedTicket, setSelectedTicket] = useState(null)
+  const [userTickets, setUserTickets] = useState(null)
+
+  let navigate = useNavigate()
 
   const checkToken = async () => {
     const user = await CheckLogin()
@@ -36,6 +42,15 @@ function App() {
     toggleAuthenticated(false)
     localStorage.clear()
   }
+  const handleTicketSelect = (ticket) => {
+    setSelectedTicket(ticket)
+    navigate(`/ticket/${ticket.id}`)
+  }
+  const handleUserTickets = async (user) => {
+    let user_id = user.id
+    let tickets = await Client.get(`${BASE_URL}/api/ticket/${user_id}`)
+    setUserTickets(tickets.data)
+  }
   return (
     <div className="App">
       <Header LogOut={LogOut} user={user} authenticated={authenticated} />
@@ -49,6 +64,20 @@ function App() {
               <Login
                 setUser={setUser}
                 toggleAuthenticated={toggleAuthenticated}
+              />
+            }
+          />
+          <Route
+            path="/tickets"
+            element={
+              <Bookings
+                user={user}
+                authenticated={authenticated}
+                userTickets={userTickets}
+                handleTicketSelect={handleTicketSelect}
+                handleUserTickets={handleUserTickets}
+                setSelectedTicket={setSelectedTicket}
+                LogOut={LogOut}
               />
             }
           />

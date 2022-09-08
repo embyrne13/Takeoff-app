@@ -14,8 +14,8 @@ const Booking = ({
   LogOut
 }) => {
   const [isFormActive, setIsFormActive] = useState(false)
-  const [createNew, toggleCreateNew] = useState(false)
-  const [newTicket, setNewTicket] = useState(null)
+  // const [createNew, toggleCreateNew] = useState(false)
+  // const [newTicket, setNewTicket] = useState(null)
   const navigate = useNavigate()
 
   const toggleActive = (e) => {
@@ -26,24 +26,24 @@ const Booking = ({
       e.target.innerHTML = 'Edit Account'
     }
   }
-  const handleCreateTicket = () => {
-    toggleCreateNew(!createNew)
-  }
-  const submitNewTicket = async () => {
-    await Client.post(`${BASE_URL}/api/ticket/${user.id}`, {
-      title: newPlaylistTitle
-    })
-    toggleCreateNew(false)
-    navigate('/profile')
-  }
-  useEffect(() => {
-    if (authenticated) {
-      handleUserTickets(user)
-      setSelectedTicket(null)
-    }
-  }, [createNew])
+  // const handleCreateTicket = () => {
+  //   toggleCreateNew(!createNew)
+  // }
+  // const submitNewTicket = async () => {
+  //   await Client.post(`${BASE_URL}/api/ticket/${user.id}`, {
+  //     ticket: newTicket
+  //   })
+  //   toggleCreateNew(false)
+  //   navigate('/tickets')
+  // }
+  // useEffect(() => {
+  //   if (authenticated) {
+  //     handleUserTickets(user)
+  //     setSelectedTicket(null)
+  //   }
+  // }, [createNew])
   return user && authenticated ? (
-    <div id="profilePage">
+    <div id="ticketPage">
       <section>
         <div id="userInfo">
           {isFormActive ? <UserControls user={user} LogOut={LogOut} /> : null}
@@ -51,8 +51,7 @@ const Booking = ({
             Edit Account
           </button>
         </div>
-        <h2 className="username">{user.username}</h2>
-        <div id="addTicketButtonAndCreateTicket">
+        {/* <div id="addTicketButtonAndCreateTicket">
           <button
             className="buttonz"
             id="createPL"
@@ -72,7 +71,7 @@ const Booking = ({
               Add Ticket
             </button>
           ) : null}
-        </div>
+        </div> */}
       </section>
       <div id="userTicket">
         {/* <div className="ticketCard">
@@ -88,9 +87,9 @@ const Booking = ({
     </div>
   ) : (
     <div className="protectedContent">
-      <h4 className="needLogin">Sign in to add or view tickets</h4>
+      <h4 className="needLogin">Login to add or view tickets</h4>
       <button className="buttonz" onClick={() => navigate('/userLogin')}>
-        Sign in
+        Login
       </button>
     </div>
   )
