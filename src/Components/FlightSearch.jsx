@@ -1,9 +1,4 @@
-const SearchBar = ({
-  search,
-  setSearch,
-  setSearchFilters,
-  handleSearchSubmit
-}) => {
+const SearchBar = ({ setSearch, setSearchFilters, handleSearchSubmit }) => {
   const handleFormChange = (e) => {
     setSearch(e.target.value)
   }
