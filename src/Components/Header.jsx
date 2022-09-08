@@ -25,17 +25,8 @@ const Header = ({ LogOut, user }) => {
         </div>
         <div className="nav">
           <Link className="navBarLinks" to="/tickets">
-            My Bookings
+            My Trips
           </Link>
-          {user ? (
-            <Link className="navBarLinks" to="/profile">
-              Profile
-            </Link>
-          ) : (
-            <Link className="navBarLinks" to="/signUp">
-              Sign Up
-            </Link>
-          )}
           {userButtonOpt}
         </div>
       </nav>
