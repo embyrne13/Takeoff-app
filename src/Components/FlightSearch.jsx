@@ -27,6 +27,7 @@ const SearchBar = ({ setSearch, setSearchFilters, handleSearchSubmit }) => {
           ></input>
           <label htmlFor="search">Departing </label>
           <input
+            type="date"
             className="searchField"
             id="search"
             onChange={handleFormChange}
@@ -34,6 +35,7 @@ const SearchBar = ({ setSearch, setSearchFilters, handleSearchSubmit }) => {
           ></input>
           <label htmlFor="search">Arriving </label>
           <input
+            type="date"
             className="searchField"
             id="search"
             onChange={handleFormChange}
