@@ -24,8 +24,8 @@ const Header = ({ LogOut, user }) => {
           </Link>
         </div>
         <div className="nav">
-          <Link className="navBarLinks" to="/">
-            Home
+          <Link className="navBarLinks" to="/tickets">
+            My Bookings
           </Link>
           {user ? (
             <Link className="navBarLinks" to="/profile">
