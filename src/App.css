@@ -1,28 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
 
+.App {
+  text-align: center;
+  font-family: 'Aboreto', cursive;
+  font-weight: bold;
+}
 header {
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
-  width: 0vw;
+  background-color: green;
 }
 nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
-.logoHeader {
+.logoLink {
   display: flex;
   justify-content: flex-start;
 }
-.navBarLinks {
-  padding: 17px;
-  color: black;
-  background-color: white;
-  width: fit-content;
-  height: fit-content;
-  height: 1vh;
+.navLinks:hover {
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
 }
-.logoH {
-  height: 12vh;
-  padding-left: 10px;
+.navLinks {
+  text-decoration: none;
+  font-size: 23px;
+  padding-left: 17px;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(0, 194, 203);
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
 }

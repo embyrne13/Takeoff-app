@@ -46,7 +46,7 @@ const SignUp = () => {
               onChange={handleChange}
               name="username"
               type="text"
-              placeholder="DottieMoo3"
+              placeholder="Emily Byrne"
               value={formValues.username}
               required
             />
@@ -58,7 +58,7 @@ const SignUp = () => {
               onChange={handleChange}
               name="email"
               type="email"
-              placeholder="dottiemoo@email.com"
+              placeholder="emily@email.com"
               value={formValues.email}
               required
             />
