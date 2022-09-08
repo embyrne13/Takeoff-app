@@ -24,11 +24,11 @@ nav {
   padding: 10px;
 }
 .nav {
-  font-size: 23px;
+  font-size: 27px;
   margin: 20px;
 }
 .here {
-  color: rgb(56, 112, 194);
+  color: navy;
 }
 .flightSearch {
   display: flex;
@@ -65,11 +65,37 @@ nav {
   background-color: rgb(56, 112, 194);
   color: white;
 }
-
 .buttonz {
   font-size: 21px;
   cursor: pointer;
   font-weight: bold;
   color: rgb(56, 112, 194);
   font-family: 'Alegreya Sans SC', sans-serif;
+}
+.buttonZ:hover {
+  text-decoration: none;
+  background-color: rgb(201, 138, 216);
+}
+.buttonZ {
+  font-size: 21px;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgb(56, 112, 194);
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+.loginCard {
+  font-size: 27px;
+  color: rgb(56, 112, 194);
+}
+.signUpPage {
+  font-size: 27px;
+  color: rgb(56, 112, 194);
+}
+.loginField {
+  font-size: 22px;
+  color: rgb(56, 112, 194);
+}
+.signUpField {
+  font-size: 22px;
+  color: rgb(56, 112, 194);
 }
