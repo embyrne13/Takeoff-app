@@ -21,9 +21,12 @@ nav {
   text-decoration: none;
   font-family: 'Alegreya Sans SC', sans-serif;
   color: rgb(56, 112, 194);
+  padding: 10px;
 }
 .nav {
   font-size: 23px;
-  padding: 10px;
-  margin-right: 20px;
+  margin: 20px;
+}
+.here {
+  color: rgb(56, 112, 194);
 }
