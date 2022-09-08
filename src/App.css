@@ -12,20 +12,18 @@ nav {
   display: flex;
   justify-content: flex-start;
 }
-.navLinks:hover {
+.navBarLinks:hover {
   text-decoration: none;
-  color: white;
+  color: rgb(27, 204, 224);
   font-family: 'Alegreya Sans SC', sans-serif;
 }
-.navLinks {
+.navBarLinks {
   text-decoration: none;
-  font-size: 23px;
-  padding-left: 17px;
   font-family: 'Alegreya Sans SC', sans-serif;
-  color: rgb(0, 194, 203);
-  display: flex;
-  justify-content: flex-end;
+  color: rgb(56, 112, 194);
 }
 .nav {
+  font-size: 23px;
+  padding: 10px;
   margin-right: 20px;
 }

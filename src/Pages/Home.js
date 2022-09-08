@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import FlightSearch from '../Components/FlightSearch'
 import FlightDetails from '../Components/FlightDetails'
-import axios from 'axios'
 
 const Home = ({
   flightSearchFilters,
