@@ -45,11 +45,8 @@ const SearchBar = ({
             placeholder="Arriving"
           ></input>
         </div>
-        <button className="buttonZ" type="reset" value="Reset">
-          Reset
-        </button>
         <button className="buttonz" type="submit">
-          Search
+          Search Flight
         </button>
       </form>
     </div>
