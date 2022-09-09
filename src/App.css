@@ -127,7 +127,11 @@ h3 {
   font-size: 21px;
   color: rgb(56, 112, 194);
 }
-label {
+.oneFieldForm {
+  font-size: 21px;
+  color: rgb(56, 112, 194);
+}
+.search {
   font-size: 21px;
   color: rgb(56, 112, 194);
 }
