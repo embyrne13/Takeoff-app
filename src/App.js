@@ -44,7 +44,7 @@ function App() {
   }
   const handleTicketSelect = (ticket) => {
     setSelectedTicket(ticket)
-    navigate(`/ticket/${ticket.id}`)
+    navigate(`/tickets/${ticket.id}`)
   }
   const handleUserTickets = async (user) => {
     let user_id = user.id

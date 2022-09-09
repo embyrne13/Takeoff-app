@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import FlightSearch from '../Components/FlightSearch'
 import FlightDetails from '../Components/FlightDetails'
-
+import axios from 'axios'
 const Home = ({
   flightSearchFilters,
   setFlightSearchFilters,
@@ -34,10 +34,10 @@ const Home = ({
 
   const handleSearchSubmit = async (e, value) => {
     e.preventDefault()
-      // await axios
-      // .request(options)
+    await axios
+      .request()
       .then(function (response) {
-        setSearchResults(response.data.tracks.items)
+        setSearchResults(response.data.items)
       })
       .catch(function (error) {
         console.error(error)
