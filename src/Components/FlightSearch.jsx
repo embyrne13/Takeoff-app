@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import { useNavigate } from 'react-router-dom'
 const SearchBar = (
   {
     setSearch,
@@ -17,6 +17,7 @@ const SearchBar = (
   const handleFormReset = () => {
     setSearchFilters({})
   }
+  const navigate = useNavigate()
 
   return (
     <div className="searchCard">
@@ -42,7 +43,6 @@ const SearchBar = (
             </option>
           </select>
           <label htmlFor="search">Going to {''}</label>
-          {/* <select className="search" value={props.destValue}  */}
           <select
             className="search"
             defaultValue={props.destValue}
@@ -78,7 +78,11 @@ const SearchBar = (
             placeholder="Returning"
           ></input>
         </div>
-        <button className="buttonz" type="submit">
+        <button
+          className="buttonz"
+          type="submit"
+          onClick={() => navigate('/results')}
+        >
           Search Flight
         </button>
       </form>

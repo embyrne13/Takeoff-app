@@ -4,12 +4,7 @@ import FlightDetails from '../Components/FlightDetails'
 import { getFlight } from '../services/Auth'
 import Client, { BASE_URL } from '../services/api'
 import axios from 'axios'
-const Home = ({
-  flightSearchFilters,
-  setFlightSearchFilters,
-  handleFlightSelect
-  // setSelectedTicket
-}) => {
+const Home = ({ flightSearchFilters, setFlightSearchFilters, setResults }) => {
   const [search, setSearch] = useState('')
   const [searchResults, setSearchResults] = useState([])
   const [selectValue, setSelectValue] = useState('')
@@ -23,19 +18,7 @@ const Home = ({
   }
   let origin = selectValue
   let destination = destValue
-  console.log(destValue)
-  console.log(selectValue)
-  // const getFlight = async () => {
-  //   console.log('got here')
-  //   try {
-  //     const res = await Client.get(
-  //       `/api/flight?destination=${destination}&origin=${origin}`
-  //     )
-  //     return res.data
-  //   } catch (error) {
-  //     throw error
-  //   }
-  // }
+
   const handleSearchSubmit = async (e, value) => {
     e.preventDefault()
 
@@ -45,8 +28,7 @@ const Home = ({
       .then(function (response) {
         console.log(response)
         searchResults.push(response.data)
-        // setSearchResults(response.data)
-        // setSearchResults(searchResults)
+        setResults(response.data)
         console.log(searchResults)
       })
       .catch(function (error) {

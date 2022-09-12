@@ -101,17 +101,17 @@ const FlightDetails = ({
   }
   return (
     <div id="flightDetailsPage">
-      <div className="info">
+      <div>hello</div>
+      {/* <div className="info">
         <h3>Airline: {flight.data.airline}</h3>
-        <h3>Depart Date: {flight.data.departDay}</h3>
-        <h3>Depart Time: {flight.data.departTime}</h3>
-        <h3>Arrival Time: {flight.data.arrivalTime}</h3>
-        <h3>Duration: {flight.data.duration}</h3>
-      </div>
-      <button className="buttonz" onClick={handleGoToSearch}>
+        <h3>Origin: {flight.origin}</h3>
+        <h3>Destination: {flight.destination}</h3>
+        <h3>Duration: {flight.duration}</h3>
+      </div> */}
+      {/* <button className="buttonz" onClick={handleGoToSearch}>
         Back to Search
       </button>
-      {!selectedTicket ? selectOptions : null}
+      {!selectedTicket ? selectOptions : null} */}
     </div>
   )
 }
