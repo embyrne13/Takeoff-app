@@ -27,3 +27,12 @@ export const CheckLogin = async () => {
     throw error
   }
 }
+
+export const getFlight = async () => {
+  try {
+    const res = await Client.get('/api/flight')
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}

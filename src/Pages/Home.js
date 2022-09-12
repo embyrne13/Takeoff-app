@@ -9,7 +9,7 @@ const Home = ({
   // setSelectedTicket
 }) => {
   const [search, setSearch] = useState('')
-  const [searchResults, setSearchResults] = useState(null)
+  const [searchResults, setSearchResults] = useState([])
 
   // const axios = require('axios')
 
