@@ -26,12 +26,6 @@ const SearchBar = ({ setSearch, setSearchFilters, handleSearchSubmit }) => {
               London
             </option>
           </select>
-          {/* <input
-            className="searchField"
-            id="search"
-            onChange={handleFormChange}
-            placeholder="Leaving from"
-          ></input> */}
           <label htmlFor="search">Going to {''}</label>
           <select className="search">
             <option className="search" value="New York">
