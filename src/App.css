@@ -55,7 +55,7 @@ nav {
 .home {
   background-image: url('https://p0.pikist.com/photos/450/710/airplane-view-mountains-above-landscape-top-flight-scenic-sky.jpg');
   background-size: cover;
-  height: 90vh;
+  height: 86.3vh;
 }
 .logoH {
   height: 13vh;
@@ -132,6 +132,10 @@ h3 {
   color: rgb(56, 112, 194);
 }
 .search {
+  font-size: 21px;
+  color: rgb(56, 112, 194);
+}
+.msg {
   font-size: 21px;
   color: rgb(56, 112, 194);
 }
