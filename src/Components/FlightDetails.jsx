@@ -3,6 +3,8 @@ import Client, { BASE_URL } from '../services/api'
 import swal from 'sweetalert'
 
 const FlightDetails = ({
+  isToggled,
+  setIsToggled,
   selectedFlight,
   setSelectedFlight,
   handleGoToSearch,
@@ -11,7 +13,12 @@ const FlightDetails = ({
   userTickets,
   selectedTicket,
   setSelectedTicket,
-  flight
+  flight,
+  handleSearchSubmit,
+  selectValue,
+  handleSelectChange,
+  destValue,
+  handleDestValue
 }) => {
   const navigate = useNavigate()
 
@@ -101,13 +108,18 @@ const FlightDetails = ({
   }
   return (
     <div id="flightDetailsPage">
-      {/* <div className="info">
-        <h3>Airline: {flight.data.airline}</h3>
+      <div className="info">
+        <h3>Airline: {flight.airline}</h3>
         <h3>Origin: {flight.origin}</h3>
         <h3>Destination: {flight.destination}</h3>
         <h3>Duration: {flight.duration}</h3>
-      </div> */}
-      <button className="buttonz" onClick={handleGoToSearch}>
+      </div>
+      <button
+        className="buttonz"
+        onClick={() => {
+          setIsToggled(!isToggled)
+        }}
+      >
         Back to Search
       </button>
       {!selectedTicket ? selectOptions : null}

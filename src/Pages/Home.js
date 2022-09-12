@@ -9,7 +9,7 @@ const Home = ({ flightSearchFilters, setFlightSearchFilters, setResults }) => {
   const [searchResults, setSearchResults] = useState([])
   const [selectValue, setSelectValue] = useState('')
   const [destValue, setDestValue] = useState('')
-
+  const [isToggled, setIsToggled] = useState(true)
   const handleSelectChange = (e) => {
     setSelectValue(e.target.value)
   }
@@ -30,6 +30,7 @@ const Home = ({ flightSearchFilters, setFlightSearchFilters, setResults }) => {
         searchResults.push(response.data)
         setResults(response.data)
         console.log(searchResults)
+        setIsToggled(false)
       })
       .catch(function (error) {
         console.error(error)
@@ -45,26 +46,37 @@ const Home = ({ flightSearchFilters, setFlightSearchFilters, setResults }) => {
     <div className="home">
       <div className="flightSearch">
         <div id="searchOptions">
-          <div>
-            {searchResults.map((flight, index) => (
-              // <div key={index}>
-              //   <p>{flight.origin}</p>
-              //   <p>{flight.destination}</p>
-              // </div>
-              <FlightDetails key={index} flight={flight} />
-            ))}
-          </div>
-          <FlightSearch
-            search={search}
-            setSearch={setSearch}
-            flightSearchFilters={flightSearchFilters}
-            setFlightSearchFilters={setFlightSearchFilters}
-            handleSearchSubmit={handleSearchSubmit}
-            selectValue={selectValue}
-            handleSelectChange={handleSelectChange}
-            destValue={destValue}
-            handleDestValue={handleDestValue}
-          />
+          {isToggled ? (
+            <FlightSearch
+              search={search}
+              setSearch={setSearch}
+              flightSearchFilters={flightSearchFilters}
+              setFlightSearchFilters={setFlightSearchFilters}
+              handleSearchSubmit={handleSearchSubmit}
+              selectValue={selectValue}
+              handleSelectChange={handleSelectChange}
+              destValue={destValue}
+              handleDestValue={handleDestValue}
+              isToggled={isToggled}
+              setIsToggled={setIsToggled}
+            />
+          ) : (
+            <div>
+              {searchResults.map((flight, index) => (
+                // <div key={index}>
+                //   <p>{flight.origin}</p>
+                //   <p>{flight.destination}</p>
+                // </div>
+                <FlightDetails
+                  key={index}
+                  flight={flight}
+                  setResults={setResults}
+                  isToggled={isToggled}
+                  setIsToggled={setIsToggled}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>

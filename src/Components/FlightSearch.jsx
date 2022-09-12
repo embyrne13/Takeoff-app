@@ -81,7 +81,7 @@ const SearchBar = (
         <button
           className="buttonz"
           type="submit"
-          onClick={() => navigate('/results')}
+          // onClick={() => navigate('/results')}
         >
           Search Flight
         </button>
