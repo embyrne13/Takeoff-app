@@ -27,14 +27,3 @@ export const CheckLogin = async () => {
     throw error
   }
 }
-
-export const getFlight = async ({ destination, origin }) => {
-  try {
-    const res = await Client.get(
-      `/api/flight?destination=${destination}&origin=${origin}`
-    )
-    return res.data
-  } catch (error) {
-    throw error
-  }
-}

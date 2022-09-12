@@ -10,7 +10,8 @@ const FlightDetails = ({
   authenticated,
   userTickets,
   selectedTicket,
-  setSelectedTicket
+  setSelectedTicket,
+  flight
 }) => {
   const navigate = useNavigate()
 
@@ -101,11 +102,11 @@ const FlightDetails = ({
   return (
     <div id="flightDetailsPage">
       <div className="info">
-        <h3>Airline: {selectedFlight.data.airline}</h3>
-        <h3>Depart Date: {selectedFlight.data.departDay}</h3>
-        <h3>Depart Time: {selectedFlight.data.departTime}</h3>
-        <h3>Arrival Time: {selectedFlight.data.arrivalTime}</h3>
-        <h3>Duration: {selectedFlight.data.duration}</h3>
+        <h3>Airline: {flight.data.airline}</h3>
+        <h3>Depart Date: {flight.data.departDay}</h3>
+        <h3>Depart Time: {flight.data.departTime}</h3>
+        <h3>Arrival Time: {flight.data.arrivalTime}</h3>
+        <h3>Duration: {flight.data.duration}</h3>
       </div>
       <button className="buttonz" onClick={handleGoToSearch}>
         Back to Search

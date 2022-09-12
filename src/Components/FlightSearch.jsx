@@ -1,4 +1,15 @@
-const SearchBar = ({ setSearch, setSearchFilters, handleSearchSubmit }) => {
+import { useState } from 'react'
+
+const SearchBar = (
+  {
+    setSearch,
+    setSearchFilters,
+    handleSearchSubmit,
+    handleSelectChange,
+    handleDestValue
+  },
+  props
+) => {
   const handleFormChange = (e) => {
     setSearch(e.target.value)
   }
@@ -12,41 +23,44 @@ const SearchBar = ({ setSearch, setSearchFilters, handleSearchSubmit }) => {
       <form onReset={handleFormReset} onSubmit={handleSearchSubmit}>
         <div className="searchField">
           <label htmlFor="search">Leaving from {''}</label>
-          <select className="search">
+          <select
+            className="search"
+            defaultValue={props.selectValue}
+            onChange={handleSelectChange}
+          >
             <option className="search" value="New York">
               New York
             </option>
-            <option className="search" value="madrid">
+            <option className="search" value="Madrid">
               Madrid
             </option>
-            <option className="search" value="paris">
+            <option className="search" value="Paris">
               Paris
             </option>
-            <option className="search" value="london">
+            <option className="search" value="London">
               London
             </option>
           </select>
           <label htmlFor="search">Going to {''}</label>
-          <select className="search">
+          {/* <select className="search" value={props.destValue}  */}
+          <select
+            className="search"
+            defaultValue={props.destValue}
+            onChange={handleDestValue}
+          >
             <option className="search" value="New York">
               New York
             </option>
-            <option className="search" value="madrid">
+            <option className="search" value="Madrid">
               Madrid
             </option>
-            <option className="search" value="paris">
+            <option className="search" value="Paris">
               Paris
             </option>
-            <option className="search" value="london">
+            <option className="search" value="London">
               London
             </option>
           </select>
-          {/* <input
-            className="searchField"
-            id="search"
-            onChange={handleFormChange}
-            placeholder="Going to"
-          ></input> */}
           <label htmlFor="search">Departing </label>
           <input
             type="date"
