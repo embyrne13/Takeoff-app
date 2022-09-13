@@ -1,5 +1,3 @@
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 const SearchBar = (
   {
     setSearch,
@@ -17,7 +15,6 @@ const SearchBar = (
   const handleFormReset = () => {
     setSearchFilters({})
   }
-  const navigate = useNavigate()
 
   return (
     <div className="searchCard">

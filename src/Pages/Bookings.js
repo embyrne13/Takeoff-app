@@ -2,22 +2,12 @@ import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import UserControls from '../Components/UserControls'
 import { useState } from 'react'
-import Client, { BASE_URL } from '../services/api'
+import { BASE_URL } from '../services/api'
 import axios from 'axios'
 import TicketCard from '../Components/TicketCard'
-const Booking = ({
-  user,
-  authenticated,
-  userTickets,
-  handleTicketSelect,
-  handleUserTickets,
-  setSelectedTicket,
-  LogOut
-}) => {
+const Booking = ({ user, authenticated, LogOut }) => {
   const [isFormActive, setIsFormActive] = useState(false)
   const [ticketResults, setTicketResults] = useState([])
-  // const [createNew, toggleCreateNew] = useState(false)
-  // const [newTicket, setNewTicket] = useState(null)
   const navigate = useNavigate()
 
   const toggleActive = (e) => {
@@ -28,7 +18,7 @@ const Booking = ({
       e.target.innerHTML = 'Edit Account'
     }
   }
-  const ticket = async () => {
+  const getTicket = async () => {
     await axios
       .get(`${BASE_URL}/api/ticket/`)
       .then(function (response) {
@@ -41,24 +31,9 @@ const Booking = ({
       })
   }
   useEffect(() => {
-    ticket()
+    getTicket()
   }, [])
-  // const handleCreateTicket = () => {
-  //   toggleCreateNew(!createNew)
-  // }
-  // const submitNewTicket = async () => {
-  //   await Client.post(`${BASE_URL}/api/ticket/${user.id}`, {
-  //     ticket: newTicket
-  //   })
-  //   toggleCreateNew(false)
-  //   navigate('/tickets')
-  // }
-  // useEffect(() => {
-  //   if (authenticated) {
-  //     handleUserTickets(user)
-  //     setSelectedTicket(null)
-  //   }
-  // }, [createNew])
+
   return user && authenticated ? (
     <div id="ticketPage">
       <section>
@@ -70,42 +45,11 @@ const Booking = ({
         </div>
         <div className="tkt">
           {ticketResults?.map((ticket) => (
-            <TicketCard ticket={ticket} />
+            <TicketCard ticket={ticket} getTicket={getTicket} />
           ))}
         </div>
-        {/* <div id="addTicketButtonAndCreateTicket">
-          <button
-            className="buttonz"
-            id="createTK"
-            onClick={handleCreateTicket}
-          >
-            {createNew ? 'Cancel' : 'Create Ticket'}
-          </button>
-          {createNew ? (
-            <input
-              className="createTickettName"
-              placeholder="Ticket"
-              onChange={(e) => setNewTicket(e.target.value)}
-            />
-          ) : null}
-          {createNew ? (
-            <button className="buttonz" onClick={submitNewTicket}>
-              Add Ticket
-            </button>
-          ) : null}
-        </div> */}
       </section>
-      <div id="userTicket">
-        {/* <div className="ticketCard">
-          {userTickets?.map((userTicket, index) => (
-            <TicketCard
-              key={userTicket.id}
-              userTicket={userTicket}
-              handleTicketSelect={() => handleTicketSelect(userTicket)}
-            />
-          ))}
-        </div> */}
-      </div>
+      <div id="userTicket"></div>
     </div>
   ) : (
     <div className="protectedContent">

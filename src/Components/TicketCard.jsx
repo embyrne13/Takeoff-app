@@ -1,13 +1,12 @@
 import axios from 'axios'
 import { useState } from 'react'
 import { BASE_URL } from '../services/api'
-
-const TicketCard = ({ ticket, ticketResults }) => {
+const TicketCard = ({ ticket, getTicket }) => {
   const [delT, setDelT] = useState({})
   const deleteTicket = async () => {
     const res = await axios.delete(`${BASE_URL}/api/ticket/${ticket.id}`)
     setDelT(res.data)
-    ticketResults()
+    getTicket()
   }
   return (
     <div className="ticket">

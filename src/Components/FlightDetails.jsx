@@ -1,7 +1,5 @@
-import { useNavigate } from 'react-router-dom'
 import Client, { BASE_URL } from '../services/api'
 import swal from 'sweetalert'
-import { useState } from 'react'
 const url = require('../Components/plane22.png')
 
 const FlightDetails = ({
@@ -16,8 +14,6 @@ const FlightDetails = ({
   flight,
   setSearchResults
 }) => {
-  const navigate = useNavigate()
-
   const handleAddToTicket = async (ticket_id) => {
     let flight_city = flight.data.city
     let flight_airport = flight.data.airport

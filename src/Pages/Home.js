@@ -1,8 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import FlightSearch from '../Components/FlightSearch'
 import FlightDetails from '../Components/FlightDetails'
-import { getFlight } from '../services/Auth'
-import Client, { BASE_URL } from '../services/api'
+import { BASE_URL } from '../services/api'
 import axios from 'axios'
 const Home = ({ flightSearchFilters, setFlightSearchFilters, setResults }) => {
   const [search, setSearch] = useState('')
@@ -38,9 +37,6 @@ const Home = ({ flightSearchFilters, setFlightSearchFilters, setResults }) => {
 
     setSearch(value)
   }
-  // useEffect(() => {
-  //   setSelectedTicket(null)
-  // }, [])
 
   return (
     <div className="home">
