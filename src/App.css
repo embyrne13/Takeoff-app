@@ -167,3 +167,24 @@ h3 {
     justify-content: space-around;
   }
 }
+.tkt {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+.ticket {
+  font-size: 17px;
+  margin: 22px;
+  color: rgb(56, 112, 194);
+  width: fit-content;
+  padding: 5px;
+  border: 5px solid rgb(56, 112, 194);
+  border-style: outset;
+}
+.tI {
+  display: inline-block;
+  font-size: 21px;
+  margin: 0;
+  color: navy;
+}

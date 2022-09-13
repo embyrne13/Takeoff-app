@@ -84,7 +84,7 @@ const FlightDetails = ({
             key={ticket.id}
             onClick={() => handleAddToTicket(ticket.id)}
           >
-            {ticket.origin}
+            {ticket.refNumber}
           </button>
         ))}
       </div>
