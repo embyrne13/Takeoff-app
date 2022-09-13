@@ -105,7 +105,7 @@ const FlightDetails = ({
   return (
     <div
       className="flightDetailsPage"
-      style={{ backgroundImage: `url(${url})`, backgroundSize: 'cover' }}
+      style={{ backgroundImage: `url(${url})`, backgroundSize: '363vh' }}
     >
       <div className="fI">
         <h3 className="flightInfo">
