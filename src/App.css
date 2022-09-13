@@ -33,6 +33,7 @@ nav {
 }
 .here {
   color: navy;
+  text-decoration: none;
 }
 .flightSearch {
   display: flex;
@@ -163,9 +164,6 @@ h3 {
   display: flex;
   margin: 20px;
 }
-/* .fi {
-  margin: 77px;
-} */
 .fliii {
   display: inline-block;
   color: white;
