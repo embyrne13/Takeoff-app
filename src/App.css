@@ -188,8 +188,8 @@ h3 {
   color: navy;
 }
 .buttonD:hover {
-  text-decoration: none;
-  background-color: rgb(201, 138, 216);
+  background-color: rgb(56, 112, 194);
+  color: white;
 }
 .buttonD {
   display: flex;
@@ -198,6 +198,8 @@ h3 {
   font-size: 17px;
   cursor: pointer;
   font-weight: bold;
+  border: 3px solid rgb(56, 112, 194);
+  border-style: outset;
   color: rgb(56, 112, 194);
   font-family: 'Alegreya Sans SC', sans-serif;
 }
