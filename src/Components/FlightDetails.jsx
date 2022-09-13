@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import Client, { BASE_URL } from '../services/api'
 import swal from 'sweetalert'
 import { useState } from 'react'
+const url = require('../Components/plane22.png')
 
 const FlightDetails = ({
   isToggled,
@@ -102,16 +103,19 @@ const FlightDetails = ({
     )
   }
   return (
-    <div className="flightDetailsPage">
-      <div className="info">
+    <div
+      className="flightDetailsPage"
+      style={{ backgroundImage: `url(${url})` }}
+    >
+      <div className="fI">
         <h3 className="flightInfo">
-          Airline: <p className="fliii">{flight.airline}</p>
+          Airline: <p className="fliii"> {flight.airline}</p>
         </h3>
         <h3 className="flightInfo">
           Origin: <p className="fliii">{flight.origin}</p>
         </h3>
         <h3 className="flightInfo">
-          Depart Time: <p className="fliii">{flight.departTime}pm</p>{' '}
+          Depart Time: <p className="fliii">{flight.departTime}pm</p>
         </h3>
         <h3 className="flightInfo">
           Destination: <p className="fliii">{flight.destination}</p>
@@ -119,6 +123,8 @@ const FlightDetails = ({
         <h3 className="flightInfo">
           Arrival Time: <p className="fliii">{flight.arrivalTime}am</p>
         </h3>
+      </div>
+      <div className="fi">
         {!selectedTicket ? selectOptions : null}
         <button
           className="buttonz"

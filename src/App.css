@@ -119,6 +119,7 @@ nav {
   font-size: 21px;
   cursor: pointer;
   font-weight: bold;
+  margin-left: 10px;
   color: rgb(56, 112, 194);
   font-family: 'Alegreya Sans SC', sans-serif;
 }
@@ -140,17 +141,34 @@ h3 {
   color: rgb(56, 112, 194);
 }
 .msg {
-  font-size: 21px;
-  color: rgb(56, 112, 194);
+  font-size: 23px;
+  margin: 5px;
+  color: white;
 }
 .flightDetailsPage {
-  background-color: rgb(196, 225, 235);
-  border: 5px solid white;
+  border-top: 5px solid white;
+  border-bottom: 10px solid white;
   width: 100vw;
+  height: 30vh;
 }
+.fI {
+  display: flex;
+  margin-top: 33px;
+  padding-left: 151px;
+  justify-content: center;
+}
+.flightInfo {
+  color: white;
+  font-size: 24.5px;
+  display: flex;
+  margin: 20px;
+}
+/* .fi {
+  margin: 77px;
+} */
 .fliii {
   display: inline-block;
-  color: navy;
+  color: white;
   margin: 0;
 }
 @media only screen and (max-width: 450px) {
