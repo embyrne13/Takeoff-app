@@ -29,6 +29,9 @@ const SearchBar = (
             defaultValue={props.selectValue}
             onChange={handleSelectChange}
           >
+            <option className="search" value="Select City">
+              Select City
+            </option>
             <option className="search" value="New York">
               New York
             </option>
@@ -48,6 +51,9 @@ const SearchBar = (
             defaultValue={props.destValue}
             onChange={handleDestValue}
           >
+            <option className="search" value="Select City">
+              Select City
+            </option>
             <option className="search" value="New York">
               New York
             </option>
