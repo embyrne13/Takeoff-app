@@ -44,6 +44,30 @@ const SearchBar = (
             <option className="search" value="London">
               London
             </option>
+            <option className="search" value="Lima">
+              Lima
+            </option>
+            <option className="search" value="Warsaw">
+              Warsaw
+            </option>
+            <option className="search" value="Prague">
+              Prague
+            </option>
+            <option className="search" value="Amsterdam">
+              Amsterdam
+            </option>
+            <option className="search" value="Rome">
+              Rome
+            </option>
+            <option className="search" value="Dublin">
+              Dublin
+            </option>
+            <option className="search" value="Rome">
+              Rome
+            </option>
+            <option className="search" value="Lisbon">
+              Lisbon
+            </option>
           </select>
           <label htmlFor="search">Going to {''}</label>
           <select
@@ -65,6 +89,30 @@ const SearchBar = (
             </option>
             <option className="search" value="London">
               London
+            </option>
+            <option className="search" value="Lima">
+              Lima
+            </option>
+            <option className="search" value="Warsaw">
+              Warsaw
+            </option>
+            <option className="search" value="Prague">
+              Prague
+            </option>
+            <option className="search" value="Amsterdam">
+              Amsterdam
+            </option>
+            <option className="search" value="Rome">
+              Rome
+            </option>
+            <option className="search" value="Dublin">
+              Dublin
+            </option>
+            <option className="search" value="Rome">
+              Rome
+            </option>
+            <option className="search" value="Lisbon">
+              Lisbon
             </option>
           </select>
           <label htmlFor="search">Departing </label>
