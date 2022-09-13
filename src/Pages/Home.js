@@ -28,6 +28,7 @@ const Home = ({ flightSearchFilters, setFlightSearchFilters, setResults }) => {
       .then(function (response) {
         console.log(response)
         searchResults.push(response.data)
+        // setSearchResults(response.data)
         setResults(response.data)
         console.log(searchResults)
         setIsToggled(false)
@@ -62,7 +63,7 @@ const Home = ({ flightSearchFilters, setFlightSearchFilters, setResults }) => {
             />
           ) : (
             <div>
-              {searchResults.map((flight, index) => (
+              {searchResults[0].map((flight, index) => (
                 // <div key={index}>
                 //   <p>{flight.origin}</p>
                 //   <p>{flight.destination}</p>
