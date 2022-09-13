@@ -140,10 +140,15 @@ h3 {
   color: rgb(56, 112, 194);
 }
 .flightDetailsPage {
-  background-color: rgba(255, 255, 255, 0.902);
-  border: 5px solid lightblue;
+  background-color: rgb(196, 225, 235);
+  border: 5px solid white;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
+}
+.fliii {
+  display: inline-block;
+  color: navy;
+  margin: 0;
 }

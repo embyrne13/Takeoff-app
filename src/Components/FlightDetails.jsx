@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import Client, { BASE_URL } from '../services/api'
 import swal from 'sweetalert'
+import { useState } from 'react'
 
 const FlightDetails = ({
   isToggled,
@@ -15,13 +16,13 @@ const FlightDetails = ({
   setSelectedTicket,
   flight,
   handleSearchSubmit,
-  selectValue,
   handleSelectChange,
-  destValue,
   handleDestValue
 }) => {
   const navigate = useNavigate()
-
+  const [searchResults, setSearchResults] = useState([])
+  const [selectValue, setSelectValue] = useState('')
+  const [destValue, setDestValue] = useState('')
   const handleAddToTicket = async (ticket_id) => {
     let flight_city = selectedFlight.data.city
     let flight_airport = selectedFlight.data.airport
@@ -109,15 +110,26 @@ const FlightDetails = ({
   return (
     <div className="flightDetailsPage">
       <div className="info">
-        <h3>Airline: {flight.airline}</h3>
-        <h3>Origin: {flight.origin}</h3>
-        <h3>Destination: {flight.destination}</h3>
-        <h3>Duration: {flight.duration}</h3>
+        <h3>
+          Airline: <p className="fliii">{flight.airline}</p>
+        </h3>
+        <h3>
+          Origin: <p className="fliii">{flight.origin}</p>
+        </h3>
+        <h3>
+          Destination: <p className="fliii">{flight.destination}</p>
+        </h3>
+        <h3>
+          Duration: <p className="fliii">{flight.duration}</p>
+        </h3>
         {!selectedTicket ? selectOptions : null}
         <button
           className="buttonz"
           onClick={() => {
             setIsToggled(!isToggled)
+            setSearchResults(searchResults)
+            setDestValue(destValue)
+            setSelectValue(selectValue)
           }}
         >
           Back to Search
