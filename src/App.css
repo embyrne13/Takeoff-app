@@ -1,3 +1,7 @@
+@viewport {
+  width: device-width;
+  zoom: 1;
+}
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap');
 .App {
   text-align: center;
@@ -151,4 +155,18 @@ h3 {
   display: inline-block;
   color: navy;
   margin: 0;
+}
+@media only screen and (max-width: 450px) {
+  .searchCard {
+    margin-top: 100px;
+    margin-right: 100px;
+    background-color: white;
+    width: 55vw;
+    height: 66vh;
+    border-radius: 10%;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-around;
+  }
 }

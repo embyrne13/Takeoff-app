@@ -67,7 +67,7 @@ const Booking = ({
           </button>
         </div>
         <div>
-          {ticketResults?.map((ticket) => (
+          {ticketResults?.map(() => (
             <TicketCard ticket={ticket} />
           ))}
         </div>
