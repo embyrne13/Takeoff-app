@@ -1,4 +1,14 @@
-const TicketCard = ({ ticket }) => {
+import axios from 'axios'
+import { useState } from 'react'
+import { BASE_URL } from '../services/api'
+
+const TicketCard = ({ ticket, ticketResults }) => {
+  const [delT, setDelT] = useState({})
+  const deleteTicket = async () => {
+    const res = await axios.delete(`${BASE_URL}/api/ticket/${ticket.id}`)
+    setDelT(res.data)
+    ticketResults()
+  }
   return (
     <div className="ticket">
       <h2 className="ticketInfo">
@@ -13,6 +23,9 @@ const TicketCard = ({ ticket }) => {
       <h2 className="ticketInfo">
         Cost: <p className="tI">${ticket.flightFare}</p>
       </h2>
+      <button className="buttonD" onClick={() => deleteTicket(ticket.id)}>
+        Cancel Trip
+      </button>
     </div>
   )
 }

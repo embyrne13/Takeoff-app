@@ -171,20 +171,33 @@ h3 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 100vw;
 }
 .ticket {
   font-size: 17px;
   margin: 22px;
   color: rgb(56, 112, 194);
-  width: fit-content;
-  padding: 5px;
+  padding: 22px;
   border: 5px solid rgb(56, 112, 194);
   border-style: outset;
+  border-radius: 30%;
 }
 .tI {
   display: inline-block;
   font-size: 21px;
   margin: 0;
   color: navy;
+}
+.buttonD:hover {
+  text-decoration: none;
+  background-color: rgb(201, 138, 216);
+}
+.buttonD {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 20px;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgb(56, 112, 194);
+  font-family: 'Alegreya Sans SC', sans-serif;
 }
