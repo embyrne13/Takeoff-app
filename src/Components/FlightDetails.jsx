@@ -111,10 +111,13 @@ const FlightDetails = ({
           Origin: <p className="fliii">{flight.origin}</p>
         </h3>
         <h3>
+          Depart Time: <p className="fliii">{flight.departTime}pm</p>{' '}
+        </h3>
+        <h3>
           Destination: <p className="fliii">{flight.destination}</p>
         </h3>
         <h3>
-          Duration: <p className="fliii">{flight.duration}</p>
+          Arrival Time: <p className="fliii">{flight.arrivalTime}am</p>
         </h3>
         {!selectedTicket ? selectOptions : null}
         <button

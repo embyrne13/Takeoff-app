@@ -16,6 +16,8 @@ function App() {
   const [selectedTicket, setSelectedTicket] = useState(null)
   const [userTickets, setUserTickets] = useState(null)
   const [results, setResults] = useState(null)
+  const [ticketResults, setTicketResults] = useState([])
+
   let navigate = useNavigate()
 
   const checkToken = async () => {
@@ -72,10 +74,11 @@ function App() {
               <Bookings
                 user={user}
                 authenticated={authenticated}
-                userTickets={userTickets}
-                handleTicketSelect={handleTicketSelect}
-                handleUserTickets={handleUserTickets}
-                setSelectedTicket={setSelectedTicket}
+                ticketResults={ticketResults}
+                // userTickets={userTickets}
+                // handleTicketSelect={handleTicketSelect}
+                // handleUserTickets={handleUserTickets}
+                // setSelectedTicket={setSelectedTicket}
                 LogOut={LogOut}
               />
             }
