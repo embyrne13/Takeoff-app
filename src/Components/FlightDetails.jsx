@@ -6,35 +6,29 @@ import { useState } from 'react'
 const FlightDetails = ({
   isToggled,
   setIsToggled,
-  selectedFlight,
-  setSelectedFlight,
-  handleGoToSearch,
   user,
   authenticated,
   userTickets,
   selectedTicket,
   setSelectedTicket,
-  flight,
-  handleSearchSubmit,
-  handleSelectChange,
-  handleDestValue
+  flight
 }) => {
   const navigate = useNavigate()
   const [searchResults, setSearchResults] = useState([])
   const [selectValue, setSelectValue] = useState('')
   const [destValue, setDestValue] = useState('')
   const handleAddToTicket = async (ticket_id) => {
-    let flight_city = selectedFlight.data.city
-    let flight_airport = selectedFlight.data.airport
-    let flight_country = selectedFlight.data.country
-    let flight_date = selectedFlight.data.date
-    let flight_origin = selectedFlight.data.origin
-    let flight_destination = selectedFlight.data.destination
-    let flight_departDay = selectedFlight.data.departDay
-    let flight_departTime = selectedFlight.data.departTime
-    let flight_arrivalTime = selectedFlight.data.arrivalTime
-    let flight_airline = selectedFlight.data.airline
-    let flight_duration = selectedFlight.data.duration
+    let flight_city = flight.data.city
+    let flight_airport = flight.data.airport
+    let flight_country = flight.data.country
+    let flight_date = flight.data.date
+    let flight_origin = flight.data.origin
+    let flight_destination = flight.data.destination
+    let flight_departDay = flight.data.departDay
+    let flight_departTime = flight.data.departTime
+    let flight_arrivalTime = flight.data.arrivalTime
+    let flight_airline = flight.data.airline
+    let flight_duration = flight.data.duration
     let flightExists = await Client.get(`${BASE_URL}/api/flight`, {
       params: { airline: flight_airline }
     })
@@ -90,7 +84,7 @@ const FlightDetails = ({
             key={ticket.id}
             onClick={() => handleAddToTicket(ticket.id)}
           >
-            {ticket.flightDepartDate}
+            {ticket.origin}
           </button>
         ))}
       </div>

@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import UserControls from '../Components/UserControls'
 import { useState } from 'react'
 import Client, { BASE_URL } from '../services/api'
-
+import axios from 'axios'
+import TicketCard from '../Components/TicketCard'
 const Booking = ({
   user,
   authenticated,
@@ -14,6 +15,7 @@ const Booking = ({
   LogOut
 }) => {
   const [isFormActive, setIsFormActive] = useState(false)
+  const [ticketResults, setTicketResults] = useState([])
   // const [createNew, toggleCreateNew] = useState(false)
   // const [newTicket, setNewTicket] = useState(null)
   const navigate = useNavigate()
@@ -25,6 +27,19 @@ const Booking = ({
     } else {
       e.target.innerHTML = 'Edit Account'
     }
+  }
+  const ticket = async () => {
+    await axios
+      .get(`${BASE_URL}/api/ticket/`)
+      .then(function (response) {
+        console.log(response)
+        ticketResults.push(response.data)
+        setTicketResults(response.data)
+        console.log(ticketResults)
+      })
+      .catch(function (error) {
+        console.error(error)
+      })
   }
   // const handleCreateTicket = () => {
   //   toggleCreateNew(!createNew)
@@ -51,10 +66,15 @@ const Booking = ({
             Edit Account
           </button>
         </div>
+        <div>
+          {ticketResults?.map((ticket) => (
+            <TicketCard ticket={ticket} />
+          ))}
+        </div>
         {/* <div id="addTicketButtonAndCreateTicket">
           <button
             className="buttonz"
-            id="createPL"
+            id="createTK"
             onClick={handleCreateTicket}
           >
             {createNew ? 'Cancel' : 'Create Ticket'}

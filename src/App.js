@@ -24,12 +24,6 @@ function App() {
     toggleAuthenticated(true)
   }
 
-  // useEffect(() => {
-  //   if (authenticated) {
-  //     user
-  //   }
-  // }, [user])
-
   useEffect(() => {
     const token = localStorage.getItem('token')
     if (token && user) {
