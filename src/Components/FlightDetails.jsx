@@ -7,16 +7,16 @@ const FlightDetails = ({
   isToggled,
   setIsToggled,
   user,
+  ticket,
   authenticated,
   userTickets,
   selectedTicket,
   setSelectedTicket,
-  flight
+  flight,
+  setSearchResults
 }) => {
   const navigate = useNavigate()
-  const [searchResults, setSearchResults] = useState([])
-  const [selectValue, setSelectValue] = useState('')
-  const [destValue, setDestValue] = useState('')
+
   const handleAddToTicket = async (ticket_id) => {
     let flight_city = flight.data.city
     let flight_airport = flight.data.airport
@@ -74,11 +74,11 @@ const FlightDetails = ({
   }
 
   let selectOptions
-  if (user && userTickets && userTickets.length > 0) {
+  if (user) {
     selectOptions = (
       <div className="optDiv">
         <h4 className="msg">Book Flight</h4>
-        {userTickets.map((ticket) => (
+        {ticket.map((ticket) => (
           <button
             className="buttonz"
             key={ticket.id}
@@ -104,19 +104,19 @@ const FlightDetails = ({
   return (
     <div className="flightDetailsPage">
       <div className="info">
-        <h3>
+        <h3 className="flightInfo">
           Airline: <p className="fliii">{flight.airline}</p>
         </h3>
-        <h3>
+        <h3 className="flightInfo">
           Origin: <p className="fliii">{flight.origin}</p>
         </h3>
-        <h3>
+        <h3 className="flightInfo">
           Depart Time: <p className="fliii">{flight.departTime}pm</p>{' '}
         </h3>
-        <h3>
+        <h3 className="flightInfo">
           Destination: <p className="fliii">{flight.destination}</p>
         </h3>
-        <h3>
+        <h3 className="flightInfo">
           Arrival Time: <p className="fliii">{flight.arrivalTime}am</p>
         </h3>
         {!selectedTicket ? selectOptions : null}
@@ -124,9 +124,7 @@ const FlightDetails = ({
           className="buttonz"
           onClick={() => {
             setIsToggled(!isToggled)
-            setSearchResults(searchResults)
-            setDestValue(destValue)
-            setSelectValue(selectValue)
+            setSearchResults([])
           }}
         >
           Back to Search

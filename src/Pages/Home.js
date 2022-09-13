@@ -69,6 +69,8 @@ const Home = ({ flightSearchFilters, setFlightSearchFilters, setResults }) => {
                   setResults={setResults}
                   isToggled={isToggled}
                   setIsToggled={setIsToggled}
+                  searchResults={searchResults}
+                  setSearchResults={setSearchResults}
                 />
               ))}
             </div>

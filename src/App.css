@@ -146,9 +146,6 @@ h3 {
 .flightDetailsPage {
   background-color: rgb(196, 225, 235);
   border: 5px solid white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100vw;
 }
 .fliii {

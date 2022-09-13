@@ -33,7 +33,6 @@ const Booking = ({
       .get(`${BASE_URL}/api/ticket/`)
       .then(function (response) {
         console.log(response)
-        ticketResults.push(response.data)
         setTicketResults(response.data)
         console.log(ticketResults)
       })
@@ -41,6 +40,9 @@ const Booking = ({
         console.error(error)
       })
   }
+  useEffect(() => {
+    ticket()
+  }, [])
   // const handleCreateTicket = () => {
   //   toggleCreateNew(!createNew)
   // }
@@ -67,7 +69,7 @@ const Booking = ({
           </button>
         </div>
         <div>
-          {ticketResults?.map(() => (
+          {ticketResults?.map((ticket) => (
             <TicketCard ticket={ticket} />
           ))}
         </div>
