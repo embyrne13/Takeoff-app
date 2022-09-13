@@ -129,11 +129,7 @@ const SearchBar = (
             placeholder="Returning"
           ></input>
         </div>
-        <button
-          className="buttonz"
-          type="submit"
-          // onClick={() => navigate('/results')}
-        >
+        <button className="buttonz" type="submit">
           Search Flight
         </button>
       </form>
