@@ -33,7 +33,6 @@ nav {
 }
 .here {
   color: navy;
-  text-decoration: none;
 }
 .flightSearch {
   display: flex;
@@ -168,6 +167,9 @@ h3 {
   display: inline-block;
   color: white;
   margin: 0;
+}
+.fi {
+  margin-top: 17px;
 }
 @media only screen and (max-width: 450px) {
   .searchCard {

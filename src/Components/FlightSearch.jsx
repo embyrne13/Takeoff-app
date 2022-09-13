@@ -50,9 +50,6 @@ const SearchBar = (
             <option className="search" value="Warsaw">
               Warsaw
             </option>
-            <option className="search" value="Prague">
-              Prague
-            </option>
             <option className="search" value="Amsterdam">
               Amsterdam
             </option>
@@ -67,6 +64,9 @@ const SearchBar = (
             </option>
             <option className="search" value="Lisbon">
               Lisbon
+            </option>
+            <option className="search" value="Copenhagen">
+              Copenhagen
             </option>
           </select>
           <label htmlFor="search">Going to {''}</label>
@@ -96,9 +96,6 @@ const SearchBar = (
             <option className="search" value="Warsaw">
               Warsaw
             </option>
-            <option className="search" value="Prague">
-              Prague
-            </option>
             <option className="search" value="Amsterdam">
               Amsterdam
             </option>
@@ -113,6 +110,9 @@ const SearchBar = (
             </option>
             <option className="search" value="Lisbon">
               Lisbon
+            </option>
+            <option className="search" value="Copenhagen">
+              Copenhagen
             </option>
           </select>
           <label htmlFor="search">Departing </label>
