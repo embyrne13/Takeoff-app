@@ -8,7 +8,7 @@
 
 ---
 
-![Logo](../takeoff-app/src/Components/TakeoffLogo.png)
+![Logo](src/Components/TakeoffLogo.png)
 
 ### **_Description_**
 
@@ -32,8 +32,8 @@ Welcome to Takeoff! You will be able to look and book flights. This is your futu
 
 ### **_Screenshots_**
 
-![Takeoff Home](../takeoff-app/src/Components/TakeoffHome.png)
-![Takeoff Flight](../takeoff-app/src/Components/TakeoffFlights.png)
+![Takeoff Home](src/Components/TakeoffHome.png)
+![Takeoff Flight](src/Components/TakeoffFlights.png)
 
 ---
 
