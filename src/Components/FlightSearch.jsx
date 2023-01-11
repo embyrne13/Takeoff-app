@@ -1,15 +1,6 @@
-const SearchBar = (
-  {
-    setSearch,
-    setSearchFilters,
-    handleSearchSubmit,
-    handleSelectChange,
-    handleDestValue
-  },
-  props
-) => {
-  const handleFormChange = (e) => {
-    setSearch(e.target.value)
+const SearchBar = ({ setSearch, setSearchFilters, handleSearchSubmit }) => {
+  const handleFormChange = (city) => {
+    setSearch({ city })
   }
 
   const handleFormReset = () => {
@@ -45,19 +36,15 @@ const SearchBar = (
       <form onReset={handleFormReset} onSubmit={handleSearchSubmit}>
         <div className="searchField">
           <label htmlFor="search">Leaving from {''}</label>
-          <select
-            className="search"
-            defaultValue={props.selectValue}
-            onChange={handleSelectChange}
-          >
-            <>{getCityOptions(cityArray)}</>
+          <select className="search">
+            <option value=""></option>
+            <option>{getCityOptions(cityArray)}</option>
           </select>
           <label htmlFor="search">Going to {''}</label>
-          <select
-            className="search"
-            defaultValue={props.destValue}
-            onChange={getCityOptions(cityArray)}
-          ></select>
+          <select className="search">
+            <option value=""></option>
+            <option>{getCityOptions(cityArray)}</option>
+          </select>
           <label htmlFor="search">Departing </label>
           <input
             type="date"
