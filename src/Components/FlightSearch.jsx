@@ -16,6 +16,30 @@ const SearchBar = (
     setSearchFilters({})
   }
 
+  const cityArray = [
+    'New York',
+    'Madrid',
+    'Paris',
+    'London',
+    'Lima',
+    'Warsaw',
+    'Amsterdam',
+    'Rome',
+    'Dublin',
+    'Lisbon',
+    'Copenhagen'
+  ]
+
+  const getCityOptions = (cities) => {
+    cities.map((city) => {
+      return (
+        <option className="search" value={city} id={`city option: ${city}`}>
+          {city}
+        </option>
+      )
+    })
+  }
+
   return (
     <div className="searchCard">
       <form onReset={handleFormReset} onSubmit={handleSearchSubmit}>
@@ -26,92 +50,14 @@ const SearchBar = (
             defaultValue={props.selectValue}
             onChange={handleSelectChange}
           >
-            <option className="search" value="Select City">
-              Select City
-            </option>
-            <option className="search" value="New York">
-              New York
-            </option>
-            <option className="search" value="Madrid">
-              Madrid
-            </option>
-            <option className="search" value="Paris">
-              Paris
-            </option>
-            <option className="search" value="London">
-              London
-            </option>
-            <option className="search" value="Lima">
-              Lima
-            </option>
-            <option className="search" value="Warsaw">
-              Warsaw
-            </option>
-            <option className="search" value="Amsterdam">
-              Amsterdam
-            </option>
-            <option className="search" value="Rome">
-              Rome
-            </option>
-            <option className="search" value="Dublin">
-              Dublin
-            </option>
-            <option className="search" value="Rome">
-              Rome
-            </option>
-            <option className="search" value="Lisbon">
-              Lisbon
-            </option>
-            <option className="search" value="Copenhagen">
-              Copenhagen
-            </option>
+            <>{getCityOptions(cityArray)}</>
           </select>
           <label htmlFor="search">Going to {''}</label>
           <select
             className="search"
             defaultValue={props.destValue}
-            onChange={handleDestValue}
-          >
-            <option className="search" value="Select City">
-              Select City
-            </option>
-            <option className="search" value="New York">
-              New York
-            </option>
-            <option className="search" value="Madrid">
-              Madrid
-            </option>
-            <option className="search" value="Paris">
-              Paris
-            </option>
-            <option className="search" value="London">
-              London
-            </option>
-            <option className="search" value="Lima">
-              Lima
-            </option>
-            <option className="search" value="Warsaw">
-              Warsaw
-            </option>
-            <option className="search" value="Amsterdam">
-              Amsterdam
-            </option>
-            <option className="search" value="Rome">
-              Rome
-            </option>
-            <option className="search" value="Dublin">
-              Dublin
-            </option>
-            <option className="search" value="Rome">
-              Rome
-            </option>
-            <option className="search" value="Lisbon">
-              Lisbon
-            </option>
-            <option className="search" value="Copenhagen">
-              Copenhagen
-            </option>
-          </select>
+            onChange={getCityOptions(cityArray)}
+          ></select>
           <label htmlFor="search">Departing </label>
           <input
             type="date"
